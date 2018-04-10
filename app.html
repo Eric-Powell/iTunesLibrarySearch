@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>iTunes Library Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  
+  <body>
+
+    <div ng-app="AlbumFinder" ng-controller="AlbumsController">
+      <h1>iTunes Library Search</h1>
+      <input type="text" placeholder="enter artist" ng-model="searchPhrase">   
+      <button ng-click="search()">Search</button>
+       
+      <div class="searchError" ng-show="searchError">Your search returned 0 results, please check your spelling and try again.</div>
+       
+      <div class="albums-container" ng-show="noGrid">
+        <div ng-repeat="album in searchResults" class="albums">
+          <div class="albumName">{{album.collectionName}}</div>
+          <img src="{{album.artworkUrl100}}" alt="{{album.artworkUrl100}}" class="artwork">
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+
+

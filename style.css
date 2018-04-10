@@ -1,0 +1,50 @@
+input {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+.albums-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  
+  border: 4px solid;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+.albums-container > div {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.heading {
+  margin: 1em 2em 1em 1em;
+}
+
+.albums {
+  margin: 1em;
+}
+
+.albumName {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artwork {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.searchError {
+  margin-bottom: .5em;
+  background-color: yellow;
+  font-size: 20px;
+}
